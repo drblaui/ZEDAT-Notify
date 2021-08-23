@@ -1,0 +1,21 @@
+{
+	"manifest_version": 2,
+	"name": "Zedat Notify",
+	"version": "1.0",
+	"description": "Updates the ZEDAT Webmail Tab with a little (n) showing you got n new messages. Also send Notifications",
+
+	"icons": {
+		"48": "icons/icon-48.png"
+	},
+
+	"content_scripts": [
+		{
+			"matches": ["https://webmail.zedat.fu-berlin.de/src/webmail.php"],
+			"js": ["notify.js"]
+		}
+	],
+	"permissions": ["notifications"],
+	"background": {
+		"scripts": ["background.js"]
+	}
+}
